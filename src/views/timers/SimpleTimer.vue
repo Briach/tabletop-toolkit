@@ -62,7 +62,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import halfmoon from 'halfmoon'
+import * as halfmoon from 'halfmoon'
 
 export default class SimpleTimer extends Vue {
 
@@ -70,7 +70,7 @@ export default class SimpleTimer extends Vue {
     isCounterActive: boolean = false;
     isTimerCreated: boolean = false;
     timeIntervall: number = 30;
-    interval: ReturnType<typeof setInterval>;
+    interval: ReturnType<typeof setInterval> = setTimeout(() => { });
     selectedOption: string = "after";
 
   

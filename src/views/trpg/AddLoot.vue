@@ -80,7 +80,7 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import { Fetcher, FetchResponse } from './../../types/fetching'
-import halfmoon from 'halfmoon';
+import * as halfmoon from 'halfmoon';
 
 export default class AddLoot extends Vue {
 

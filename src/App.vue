@@ -142,7 +142,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import halfmoon from 'halfmoon';
+import * as halfmoon from 'halfmoon';
 import CookieConsent from './components/CookieConsent.vue';
 
 @Options({

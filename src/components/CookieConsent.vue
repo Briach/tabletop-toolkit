@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-const halfmoon = require('halfmoon');
+import * as halfmoon from 'halfmoon';
 
 @Options({
   props: {

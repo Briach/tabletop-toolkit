@@ -53,7 +53,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import halfmoon from 'halfmoon'
+import * as halfmoon from 'halfmoon'
 import AddPlayers from './../../components/AddPlayers.vue';
 import { Player } from './../../types'
 

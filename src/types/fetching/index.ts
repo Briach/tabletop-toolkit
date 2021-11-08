@@ -1,5 +1,5 @@
 
-import halfmoon from 'halfmoon';
+import * as halfmoon from 'halfmoon';
 
 export class Fetcher {
 
@@ -616,8 +616,8 @@ export class FetchResponse {
 
     public body: any;
     public ok: boolean;
-    public status: number;
-    public statusText: string;
+    public status: number = 0;
+    public statusText: string = "";
     public err: any;
 
     constructor(ok: boolean) {

@@ -23,11 +23,11 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import halfmoon from 'halfmoon'
-import { Player } from '../types'
+import * as halfmoon from 'halfmoon';
+import { Player } from '../types';
 
 export default class AddPlayers extends Vue {
-    rawPlayers: string
+    rawPlayers: string = "";
 
     get players(): Player[] {
         var playerNames = this.rawPlayers.split(",");
