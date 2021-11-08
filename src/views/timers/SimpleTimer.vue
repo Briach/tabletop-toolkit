@@ -70,7 +70,7 @@ export default class SimpleTimer extends Vue {
     isCounterActive: boolean = false;
     isTimerCreated: boolean = false;
     timeIntervall: number = 30;
-    interval: ReturnType<typeof setInterval> = setTimeout(() => { });
+    interval: ReturnType<typeof setInterval> = setTimeout(() => { return; }, 1);
     selectedOption: string = "after";
 
   
