@@ -9,10 +9,10 @@ export default createStore({
   mutations: {
     changeCookieConsent(state, value) {
       if (value) {
-        var cookieConsentExDays = 30
-        var d = new Date();
+        const cookieConsentExDays = 30
+        const d = new Date();
         d.setTime(d.getTime() + (cookieConsentExDays*24*60*60*1000));
-        var expires = "expires="+ d.toUTCString();
+        const expires = "expires="+ d.toUTCString();
         document.cookie = state.cookieConsentName + "=" + value + ";" + expires + ";path=/";
       }
       else {
@@ -22,11 +22,11 @@ export default createStore({
   },
   getters: {
     cookieConsent(state) {
-      var name = state.cookieConsentName + "=";
-      var decodedCookie = decodeURIComponent(document.cookie);
-      var ca = decodedCookie.split(';');
-      for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
+      const name = state.cookieConsentName + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
         while (c.charAt(0) == ' ') {
           c = c.substring(1);
         }
