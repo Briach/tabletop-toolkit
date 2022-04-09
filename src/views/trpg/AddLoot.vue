@@ -120,7 +120,14 @@ export default class AddLoot extends Vue {
     }
 
     async getSystems(): Promise<void> {
+        var activeSystems: any[] = [];
         this.systemsResponse = await Fetcher.getSystems(this.$store.getters.apiUrl, true);
+        for (let i = 0; i < this.systemsResponse.body.length; i++) {
+            if (this.systemsResponse.body[i].active == true) {
+                activeSystems.push(this.systemsResponse.body[i]);
+            } 
+        } 
+        this.systemsResponse.body = activeSystems;
         this.currentSystem = this.systemsResponse.body[0];
     }
 
