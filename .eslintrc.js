@@ -17,6 +17,7 @@ module.exports = {
     "@typescript-eslint/no-inferrable-types": [2, { "ignoreParameters": true, "ignoreProperties": true, }],
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off"
   },
   overrides: [

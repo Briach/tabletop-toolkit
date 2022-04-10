@@ -88,7 +88,7 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { Vue } from 'vue-class-component';
 import { Fetcher, FetchResponse } from './../../types/fetching'
 
 export default class LootGenerator extends Vue {
